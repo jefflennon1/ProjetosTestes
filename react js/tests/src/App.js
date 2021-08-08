@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
+import './styles.css'
 
 export default function App(){
 const [characters, setCharacters] = useState([]);
@@ -21,11 +22,18 @@ async function searchData(){
 
   return (
      <>
-     <ul>
+      <div className='divTitlePage'>
+           <div className='titlePage'>MARVEL</div>
+           <label className='titleComics'>comics</label>
+      </div>
+     <div  className='container'>
         {characters.map( character => (
-          <li key={character.id}>{character.name}</li>
+          <div key={character.id} className='conteinerCharacter'>
+            <img src={character.thumbnail.path + '/standard_xlarge.'+character.thumbnail.extension}></img>
+            <label >{character.name}</label>
+          </div>
         ))}
-     </ul>
+     </div>
      </>
   )
 }

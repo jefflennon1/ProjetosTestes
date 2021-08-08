@@ -1,0 +1,47 @@
+
+.container {
+  margin-top: 60px;
+}
+
+.conteinerCharacter {
+  display: inline-grid;
+  padding: 25px;
+  text-align: center;
+  margin-left: 15px;
+}
+
+img {
+  border-radius: 100%;
+}
+body {
+  background-color:  #000614;
+  margin: 0;
+}
+
+label {
+  font-family: 'Marvel', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.titlePage {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  text-align: center;
+  background-color: red;
+  font-size: 35px;
+}
+
+.divTitlePage {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+label.titleComics {
+  margin-top: -22px;
+  font-size: 18px;
+  color: yellow;
+}
