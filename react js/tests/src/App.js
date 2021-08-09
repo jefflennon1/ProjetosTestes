@@ -35,7 +35,7 @@ async function searchData(){
               id={character.id}
               path={character.thumbnail.path}
               extension={character.thumbnail.extension}
-              request={ {base : baseUrl, md: md5Key, myKey: apiKeyPublic}}
+              request={ {base : baseUrl, md: md5Key, myKey: apiKeyPublic, time: timestamp}}
             />
             <label >{character.name}</label>
           </div>

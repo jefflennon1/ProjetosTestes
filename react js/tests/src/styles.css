@@ -31,6 +31,7 @@ label {
   text-align: center;
   background-color: red;
   font-size: 35px;
+  padding: 8px;
 }
 
 .divTitlePage {
@@ -41,7 +42,9 @@ label {
   flex-direction: column;
 }
 label.titleComics {
-  margin-top: -22px;
-  font-size: 18px;
-  color: yellow;
+    margin-top: -26px;
+    font-size: 12px;
+    color: yellow;
+    letter-spacing: 5px;
+    margin-left: 5px;
 }
