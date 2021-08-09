@@ -30,7 +30,7 @@ async function searchData(){
       </div>
      <div  className='container'>
         {characters.map( character => (
-          <div key={character.id} className='conteinerCharacter'>
+          <div key={character.id} className='conteinerCharacter'  id={character.id}>
             <Character 
               id={character.id}
               path={character.thumbnail.path}

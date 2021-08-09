@@ -23,17 +23,19 @@ export default function Character(props){
     const characterData = response.data.data.results;
     const list = characterData.map( data =>{return data.comics});
     setComics(list);
-    exibeCommics();
+    exibeCommics(list);
 }  
 
-   function exibeCommics(){
-      const div = document.getElementById('divCaracterDescription');
-      const items = comics.map( list => {return list.items});
-    const  retorno =   items.map( item => {
-           item.map(comic =>{
-                    div.append(comic.name)
-                    });
-                  });
+   function exibeCommics(list){
+      const div = document.getElementById(id);
+      const items = list.map( list => {return list.items});
+      items.map( item => {
+        item.map(comic =>{
+                var tagA = document.createElement('a');
+                tagA.setAttribute('href', 'teste')
+                div.append(comic.name)
+                });
+              });
               
 
    }
