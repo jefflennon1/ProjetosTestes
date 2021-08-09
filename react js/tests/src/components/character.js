@@ -7,14 +7,17 @@ export default function Character(props){
   const extension = props.extension;
   const request = props.request;
   const [comics, setComics ] = useState([]);
+  const idImage = id + 1;
 
 
   return(
     <>
       <div id='divCaracterDescription'>
           <img src={path + '/standard_xlarge.'+extension}
-          onClick={()=>characterSelected(id)}/>
-         
+          onClick={()=>characterSelected(id)} id={idImage}
+          onMouseOver={()=>handleMouseOverImage(idImage)}
+          onMouseOut={()=>handleMouseOutImage(idImage)}
+          />  
       </div>
     </>
   )
@@ -32,11 +35,18 @@ export default function Character(props){
       items.map( item => {
         item.map(comic =>{
                 var tagA = document.createElement('a');
-                tagA.setAttribute('href', 'teste')
-                div.append(comic.name)
+                tagA.setAttribute('href', comic.resourceURI);
+                tagA.text = comic.name;
+                div.append(tagA)
                 });
               });
-              
-
    }
+
+   function handleMouseOverImage(idImage){
+     document.getElementById(idImage).style.width = '15em'
+   }
+
+   function handleMouseOutImage(idImage){
+    document.getElementById(idImage).style.width = '12.5em'
+  }
 }
