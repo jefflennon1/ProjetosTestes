@@ -12,21 +12,23 @@ export default function App(){
   return(
     <>
       <View style={style.container}>
-         <Text style={style.text}>Hello Word</Text>
+         <Text style={style.text}>Bem vindo, Jefferson</Text>
          <TextInput 
-            placeholder = 'new skill...'
-            placeholderTextColor='#f11111' 
+            placeholder = 'Create new skill'
+            placeholderTextColor='#707f84e8' 
             style={style.text}
             onChangeText={setNewSkill}
+            style={style.textInput}
          />
          <TouchableOpacity style={style.buttonAdd}
           activeOpacity={.7}
+          onPress={()=> handleAddSkill()}
          >
            <Text  style={style.textButton}>Add</Text>
          </TouchableOpacity>
          {
           mySkills.map(skill=>(
-              <TouchableOpacity key={skill} style={style.touchable}>
+              <TouchableOpacity key={skill} style={style.flashCard}>
                 <Text style={style.textTouchable}>{skill}</Text>
               </TouchableOpacity>
             ))
@@ -46,23 +48,46 @@ const style = StyleSheet.create({
   },
   text:{
     color: '#fff',
-  },
-  touchable: {
-    backgroundColor:'#D3D3D3',
-    padding: 15,
-    marginVertical: 25
+    fontSize: 18
   },
   textTouchable:{
-    color: '#000',
-    fontWeight: 'bold'
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 18,
+    letterSpacing: 2,
+    textTransform: 'uppercase'
   },
   buttonAdd:{
-    backgroundColor: '#919',
-    padding: 10,
-    marginVertical: 20,
-    width: 200
+    backgroundColor: '#4a8da7',
+    padding: 13,
+    marginVertical: 5,
+    width: 250,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 15
   },
   textButton:{
-    color: '#000'
-  }
+    color: '#e1e4e5',
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+  textInput:{
+    backgroundColor: '#202122',
+    marginVertical: 10,
+    width: 250  ,
+    color: '#fff',
+    borderRadius: 8
+  },
+  flashCard:{
+    backgroundColor: '#202122',
+    padding: 35,
+    marginVertical: 15,
+    width: 500,
+    textAlign: 'center',
+    alignItems: 'center',
+    borderRadius: 30,
+    borderWidth: 2,
+    borderColor: '#c6e7e9'
+  },
+ 
 })
