@@ -10,9 +10,16 @@
   margin-left: 150px;
 }
 
+
+img:hover{
+  width: 15em;
+ transition-duration: 5s ;
+}
+
 img {
   border-radius: 100%;
 }
+
 body {
   background-color:  #000614;
   margin: 0;

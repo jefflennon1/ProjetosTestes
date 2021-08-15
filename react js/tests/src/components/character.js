@@ -43,10 +43,12 @@ export default function Character(props){
    }
 
    function handleMouseOverImage(idImage){
-     document.getElementById(idImage).style.width = '15em'
+     document.getElementById(idImage).style.transitionDuration = '6s'
+    /*  document.getElementById(idImage).style.width = '15em' */
    }
 
    function handleMouseOutImage(idImage){
-    document.getElementById(idImage).style.width = '12.5em'
+    document.getElementById(idImage).style.transitionDuration = '6s'
+   /*  document.getElementById(idImage).style.width = '12.5em' */
   }
 }

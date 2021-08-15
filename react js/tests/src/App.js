@@ -3,6 +3,7 @@ import axios from 'axios';
 import md5 from 'md5';
 import './styles.css'
 import Character from './components/character';
+import { TitlePage } from './components/TitlePage';
 
 export default function App(){
 const [characters, setCharacters] = useState([]);
@@ -24,10 +25,7 @@ async function searchData(){
 
   return (
      <>
-      <div className='divTitlePage'>
-           <div className='titlePage'>MARVEL</div>
-           <label className='titleComics'>comics</label>
-      </div>
+      <TitlePage/>
      <div  className='container'>
         {characters.map( character => (
           <div key={character.id} className='conteinerCharacter'  id={character.id}>
