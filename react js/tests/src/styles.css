@@ -12,12 +12,16 @@
 
 
 img:hover{
-  width: 15em;
- transition-duration: 5s ;
+  opacity: 100.0;
+  transition-delay: -2.1s;  
+  cursor: pointer;
+  border-radius: 10%;
 }
 
 img {
   border-radius: 100%;
+  position: relative;
+  opacity: .5;
 }
 
 body {
